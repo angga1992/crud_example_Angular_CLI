@@ -1,1 +1,25 @@
 /* You can add global styles to this file, and also import other style files */
+a {
+    color: #ff0000;
+    text-decoration: none;
+}
+
+.pagination > .active > a, .pagination > .active > a:focus, .pagination > .active > a:hover, .pagination > .active > span, .pagination > .active > span:focus, .pagination > .active > span:hover {
+    background-color: #ff0000;
+    border-color: #ff0000;
+    color: #fff;
+    cursor: default;
+    z-index: 3;
+}
+
+.pagination > li > a, .pagination > li > span {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    color: #ff0000;
+    float: left;
+    line-height: 1.42857;
+    margin-left: -1px;
+    padding: 6px 12px;
+    position: relative;
+    text-decoration: none;
+}

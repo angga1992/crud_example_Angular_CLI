@@ -4,5 +4,3 @@ table{counter-reset:section;}
 counter-increment:section;
 content:counter(section);
 }
-
-
