@@ -5,6 +5,7 @@ import { HttpModule } from '@angular/http';
 import {DataFilterPipe} from "./data-filter.pipe";
 import { AppComponent } from './app.component';
 import {DataTableModule} from "angular2-datatable";
+import { DatePickerModule } from 'ng2-datepicker';
 // import { MaterialModule } from '@angular/material';
 // import { DatepickerModule } from 'angular2-material-datepicker';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
@@ -16,7 +17,7 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
   ],
   imports: [
     // MaterialModule.forRoot(),
-    // DatepickerModule,
+    DatePickerModule, 
     BrowserModule,
     FormsModule,
     HttpModule,

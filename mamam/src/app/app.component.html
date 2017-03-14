@@ -5,6 +5,7 @@
                     <img src="assets/img/logo.png" width="117" height="32">
                 <div style="margin-top:-32px; margin-left:134px; color:#000000">
                 <span> |  Data Media Sosial</span><br/>
+                
                 </div>
             </h2>
         </div>
@@ -132,13 +133,13 @@
                             <label>Nomor Handphone : </label>
 							<input type="text" class="form-control" formControlName="no_hp">
                             <label>Lahir :</label>
-							<input type="date" id="datepicker" class="form-control" formControlName="tLahir" placeholder="mm/dd/yyyy">
+                            <ng2-datepicker [options]="options" formControlName="tLahir" [(ngModel)]="tLahir" placeholder="mm/dd/yyyy"></ng2-datepicker>
                             <label>Kota Asal : </label>
 							<input type="text" class="form-control" formControlName="kota">
                             <label>EX DATE : <span class="glyphicon glyphicon-calendar"></span></label>
-							<input type="date" class="form-control" formControlName="exDate" placeholder="mm/dd/yyyy">
+                            <ng2-datepicker [options]="options" formControlName="exDate" [(ngModel)]="exDate" placeholder="mm/dd/yyyy"></ng2-datepicker>
 							<label>MASA TENGGANG : <span class="glyphicon glyphicon-calendar"></span></label>
-                            <input type="date" class="form-control" formControlName="msTenggang" placeholder="mm/dd/yyyy">
+                            <ng2-datepicker [options]="options" formControlName="msTenggang" [(ngModel)]="msTenggang" placeholder="mm/dd/yyyy"></ng2-datepicker>
 							<label>PASSWORD : </label>
 							<input type="text" class="form-control" formControlName="pass">
                         </div>

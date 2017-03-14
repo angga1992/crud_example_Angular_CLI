@@ -2,6 +2,7 @@ import {Component, OnInit} from "@angular/core";
 import {Http} from "@angular/http";
 import {Datajson} from "./datajson";
 import { FormControl, FormGroup } from '@angular/forms';
+import { DatePickerOptions, DateModel } from 'ng2-datepicker';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -9,6 +10,8 @@ import { FormControl, FormGroup } from '@angular/forms';
 })
 
 export class AppComponent implements OnInit {
+    date: DateModel;
+    options: DatePickerOptions;
     public data: any[];
     public filterQuery = "";
     public rowsOnPage = 5;
@@ -17,7 +20,8 @@ export class AppComponent implements OnInit {
     public myForm: FormGroup;
     
     constructor() {
-    this.myForm = new FormGroup({
+      this.options = new DatePickerOptions();
+      this.myForm = new FormGroup({
       id: new FormControl(''),
       no_hp: new FormControl(''),
       exDate: new FormControl(''),
@@ -63,32 +67,35 @@ export class AppComponent implements OnInit {
           return false;
         }
     }
-    Added(){
-   
-    let formValue = this.myForm.getRawValue();
-    //  console.log(this.myForm.getRawValue());
-    this.data.push({
-      id: formValue.id,
-      no_hp: formValue.no_hp,
-      exDate: formValue.exDate,
-      msTenggang: formValue.msTenggang,
-      name: formValue.name,
-      kota: formValue.kota,
-      tLahir: formValue.tLahir,
-      email: formValue. email,
-      pass: formValue.pass,
-      fb_url: formValue.fb_url,
-      fb_friend: formValue.fb_friend,
-      tw_url: formValue.tw_url,
-      tw_foll: formValue.tw_foll,
-      insta_url: formValue.insta_url,
-      insta_foll: formValue.insta_foll,
-      ip_add: formValue.ip_add,
-      mac_add: formValue.mac_add
-    });
-    alert("add success");
-    this.myForm.reset();
-  }
+    Added() {
+
+      let formValue = this.myForm.getRawValue();
+      // alert(JSON.stringify(formValue.tLahir));
+      // alert(JSON.stringify(formValue.tLahir.formatted));
+      this.data.push({
+        id: formValue.id,
+        no_hp: formValue.no_hp,
+        exDate: formValue.exDate.formatted,
+        msTenggang: formValue.msTenggang.formatted,
+        name: formValue.name,
+        kota: formValue.kota,
+        tLahir: formValue.tLahir.formatted,
+        email: formValue.email,
+        pass: formValue.pass,
+        fb_url: formValue.fb_url,
+        fb_friend: formValue.fb_friend,
+        tw_url: formValue.tw_url,
+        tw_foll: formValue.tw_foll,
+        insta_url: formValue.insta_url,
+        insta_foll: formValue.insta_foll,
+        ip_add: formValue.ip_add,
+        mac_add: formValue.mac_add
+      });
+      
+      alert("add success");
+      this.myForm.reset();
+    }
+
   Edit(formData){
     // console.log(formData);
     this.myForm.controls['id'].setValue(formData.id);
