@@ -133,14 +133,20 @@
                             <label>Nomor Handphone : </label>
 							<input type="text" class="form-control" formControlName="no_hp">
                             <label>Lahir :</label>
+                            <div class="form-control">
                             <ng2-datepicker [options]="options" formControlName="tLahir" [(ngModel)]="tLahir" placeholder="mm/dd/yyyy"></ng2-datepicker>
+                            </div>
                             <label>Kota Asal : </label>
 							<input type="text" class="form-control" formControlName="kota">
                             <label>EX DATE : <span class="glyphicon glyphicon-calendar"></span></label>
+                            <div class="form-control">
                             <ng2-datepicker [options]="options" formControlName="exDate" [(ngModel)]="exDate" placeholder="mm/dd/yyyy"></ng2-datepicker>
-							<label>MASA TENGGANG : <span class="glyphicon glyphicon-calendar"></span></label>
+                            </div>
+                            <label>MASA TENGGANG : <span class="glyphicon glyphicon-calendar"></span></label>
+                            <div class="form-control">
                             <ng2-datepicker [options]="options" formControlName="msTenggang" [(ngModel)]="msTenggang" placeholder="mm/dd/yyyy"></ng2-datepicker>
-							<label>PASSWORD : </label>
+                            </div>
+                            <label>PASSWORD : </label>
 							<input type="text" class="form-control" formControlName="pass">
                         </div>
                         <div class="col-xs-6 form-group">

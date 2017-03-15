@@ -16,7 +16,6 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
     DataFilterPipe
   ],
   imports: [
-    // MaterialModule.forRoot(),
     DatePickerModule, 
     BrowserModule,
     FormsModule,
